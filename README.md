@@ -4,3 +4,7 @@ This repository contains a Python script to generate a dynamic shader object for
 To install and use the add-on, download the file *caruncle_generator.py*, then open Blender and go to its add-on settings. Click the install button and select the downloaded file. After activating the add-on, it can be used at any time by searching for "Caruncle Generator". Apply the caruncle's shrinkwrap modifier to the eye, place the "extreme" reference object to the furthest position from the inner eye that the pupil can be expected to travel, and place the "center" reference object directly over the pupil itself. Finally, parent the caruncle and "extreme" object to the primary head bone and parent the "center" object to the eye or to an equivalent part of the armature.
 
 After this process, the shader should work appropriately. Its exact settings can be specified on creation or edited at any time in a given pipeline prior to rendering through the shading tab.
+
+<h3>Demo</h3>
+<img src="images/caruncle_demo.png" >
+Rain Rig © Blender Foundation | [cloud.blender.org](https://cloud.blender.org/welcome/)
