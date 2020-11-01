@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Caruncle Generator",
     "author": "James Partsafas",
-    "version": "1, 0",
+    "version": "1, 1",
     "blender": (2, 90, 1),
     "location": "View3D > Search > Caruncle Generator",
     "warning": "",
@@ -35,14 +35,14 @@ class CaruncleGenerator(bpy.types.Operator):
     specular : FloatProperty(
         name = "Specularity",
         description = "The specularity of the caruncle.",
-        default = 0.600,
+        default = 0.500,
         min = 0.000
         )
         
     roughness : FloatProperty(
         name = "Roughness",
         description = "The roughness of the caruncle.",
-        default = 0.400,
+        default = 0.500,
         min = 0.000
         )
     
@@ -65,7 +65,7 @@ class CaruncleGenerator(bpy.types.Operator):
         name = "Base Caruncle Rotation",
         description = "Determines the orientation of the caruncle. Changes in Y value produce most visible results.",
         size = 3,
-        default = (0.0, radians(63.0), 0.0)
+        default = (0.0, radians(64.9), 0.0)
         )
     
     solid_coloring : FloatProperty(
