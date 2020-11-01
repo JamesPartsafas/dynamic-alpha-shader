@@ -7,4 +7,4 @@ After this process, the shader should work appropriately. Its exact settings can
 
 <h3>Demo</h3>
 <img src="images/caruncle_demo.png" >
-Rain Rig © Blender Foundation | <a href="http://cloud.blender.org" target="_blank">cloud.blender.org</a>
+Rain Rig © Blender Foundation | <a href="http://cloud.blender.org">cloud.blender.org</a>
