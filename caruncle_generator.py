@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Caruncle Generator",
     "author": "James Partsafas",
-    "version": "1, 1",
+    "version": "1, 2",
     "blender": (2, 90, 1),
     "location": "View3D > Search > Caruncle Generator",
     "warning": "",
@@ -48,7 +48,8 @@ class CaruncleGenerator(bpy.types.Operator):
     
     vector_multiplication = bpy.props.FloatVectorProperty(
         name = "Shading Falloff",
-        description = "Determines how smoothly the shading drops off. Lower values have smoother shading. Higher values cut off abruptly. Changes in X value produce most visible results.",
+        description = "Determines how smoothly the shading drops off. Lower values have smoother shading. "
+        + "Higher values cut off abruptly. Changes in X value produce most visible results.",
         size = 3,
         default = (0.400, 0.000, 0.200),
         min = 0.000
