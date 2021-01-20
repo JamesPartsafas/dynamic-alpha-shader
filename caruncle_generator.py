@@ -1,14 +1,18 @@
+#Metada
+
 bl_info = {
     "name": "Caruncle Generator",
     "author": "James Partsafas",
-    "version": "1, 2",
-    "blender": (2, 90, 1),
+    "version": "1, 3",
+    "blender": (2, 91, 2),
     "location": "View3D > Search > Caruncle Generator",
     "warning": "",
     "wiki_url": "",
     "category": "Add Mesh"
 }
 
+
+#Library imports
 
 import bpy
 from bpy.props import FloatVectorProperty
@@ -57,7 +61,8 @@ class CaruncleGenerator(bpy.types.Operator):
         
     vector_mapping_location = bpy.props.FloatVectorProperty(
         name = "Base Shading Offset",
-        description = "Determines the base distance to the center of the eye. Changes in X value produce most visible results",
+        description = "Determines the base distance to the center of the eye. "
+        + "Changes in X value produce most visible results",
         size = 3,
         default = (-12.0, 0.0, 0.0)
         )
@@ -108,6 +113,11 @@ class CaruncleGenerator(bpy.types.Operator):
     
 
     def execute(self, context):
+        
+        #Enter Object Mode to generate initial objects
+        
+        if bpy.context.mode != 'OBJECT':
+            bpy.ops.object.mode_set(mode = 'OBJECT', toggle=True)
         
         
         #Create Empty for pupil position reference
@@ -271,7 +281,7 @@ class CaruncleGenerator(bpy.types.Operator):
         node_principled_bsdf.inputs[5].default_value = self.specular
         node_principled_bsdf.inputs[7].default_value = self.roughness
 
-        links.new(node_principled_bsdf.inputs[18], node_multiply_final.outputs[0])
+        links.new(node_principled_bsdf.inputs[19], node_multiply_final.outputs[0])
 
 
         material_output = nodes.get("Material Output")
